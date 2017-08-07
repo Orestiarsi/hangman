@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>hangman</title>
+  </head>
+  <body>
+    <p>Guesses Left{{guessesLeft}}
+    <p>{{letterGuess}}</p>
+    <ul>
+      {{#selections}}
+        {{#.}}
+          <li>{{.}}</li>
+        {{/.}}
+        {{/selections}}
+    </ul>
+    <form action="/" method="post" class="letterChoosing">
+      <input type="text" name="letters" placeholder="Choose a letter" autofocus = "autofocus" maxlength="1">
+      <input type="submit">
+    </form>
+  </body>
+</html>

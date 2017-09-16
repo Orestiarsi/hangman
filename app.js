@@ -32,7 +32,7 @@ let randomWord = wordChoices[Math.floor(Math.random() * wordChoices.length)];
 let randomWordList = randomWord.split('');
 let arrLength = randomWordList.length;
 
-// console.log(randomWordList);
+console.log(randomWordList);
 
 for (let i = 0; i < randomWord.length; i++) {
   letterGuess.push('_');

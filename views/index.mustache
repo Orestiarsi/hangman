@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>hangman</title>
-  </head>
+ <head>
+  <meta charset="utf-8">
+   <link rel="stylesheet" href="./main.css">
+  <title>hangman</title>
+ </head>
+
+<header>
+ <style>
+
+ body {
+  background-color: yellow;
+  text-align: center;
+  font-size: 3.5em;
+ }
+ #submit{
+  height: 10%;
+  width: 10%;
+
+  }
+   .selection {
+   width: 40vw;
+   font-size: 1em;
+  }
+.commas {
+ color: blue;
+ width: 40vw;
+ font-size: 1.5em;
+}
+  form input  {
+  width: 40vw;
+  height: 25vh;
+  font-size: 1.2em;
+ }
+ .GuessesLeft {
+  color: red;
+ }
+ </style>
+</header>
+
+
   <body>
-    <p>Guesses Left{{guessesLeft}}
+<div class="GuessesLeft">
+
+ <p>
+  <img src="https://i.imgflip.com/1vyhkz.jpg">
+  Guesses Left{{guessesLeft}}
+ </p>
+</div>
+<div class="commas">
+
     <p>{{letterGuess}}</p>
+</div>
+<div class="selection">
+
+
     <ul>
       {{#selections}}
         {{#.}}
@@ -15,9 +62,10 @@
         {{/.}}
         {{/selections}}
     </ul>
+</div>
     <form action="/" method="post" class="letterChoosing">
       <input type="text" name="letters" placeholder="Choose a letter" autofocus = "autofocus" maxlength="1">
-      <input type="submit">
+      <input type="submit"id='submit'>
     </form>
   </body>
 </html>

@@ -4,6 +4,7 @@ const session = require('express-session');
 const mustacheExpress = require('mustache-express');
 const expressValidator = require('express-validator');
 const fs = require('fs');
+const pg = require('pg');
 
 const words = fs.readFileSync("/usr/share/dict/words", "utf-8").toLowerCase().split("\n");
 const app = express();
@@ -89,4 +90,4 @@ app.get('/loose', function(req, res){
  res.render('loose');
 })
 
-app.listen(4000)
+app.listen(process.env_PORT || 4000)
